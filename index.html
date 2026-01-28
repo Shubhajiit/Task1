@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <style>
+            
         * {
             margin: 0;
             padding: 0;
@@ -135,6 +136,135 @@
                 padding: 40px 10px 24px 10px;
             }
         }
+
+
+    #about {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    display: flex;
+    justify-content: center;
+}
+
+.about-container {
+    max-width: 900px;
+    background: #ffffff;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #00ffd0, #00b894);
+}
+
+#about h3 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #232526;
+    position: relative;
+}
+
+#about h3::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: #00b894;
+    
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+#about p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+#about strong {
+    color: #00b894;
+    font-weight: 600;
+}
+
+
+@media (max-width: 700px) {
+    .about-container {
+        padding: 35px 22px;
+    }
+
+    #about h3 {
+        font-size: 1.7rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+}
+
+    #projects {
+        padding: 80px 20px;
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        color: #232526;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    .card-grid {
+        max-width: 1100px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 22px;
+        align-items: stretch;
+        padding: 10px;
+    }
+
+    .card {
+        background: #ffffff;
+        padding: 22px;
+        border-radius: 14px;
+        box-shadow: 0 8px 30px rgba(35,37,38,0.06);
+        transition: transform 0.22s ease, box-shadow 0.22s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card h4 {
+        margin-bottom: 10px;
+        color: #232526;
+        font-size: 1.15rem;
+    }
+
+    .card p {
+        color: #555;
+        line-height: 1.6;
+        margin-top: auto;
+    }
+
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 14px 40px rgba(35,37,38,0.12);
+    }
+
+    @media (max-width: 700px) {
+        #projects { padding: 40px 12px; }
+        .section-title { font-size: 1.6rem; }
+        .card { padding: 18px; }
+    }
+
     </style>
 </head>
 <body>
@@ -155,5 +285,41 @@
         <p>Web Developer | UI/UX Designer | CSE Student</p>
         <button onclick="scrollToSection()">Explore here</button>
     </section>
+
+
+      <section id="about">
+    <div class="about-container">
+        <h3>About Me</h3>
+        <p>
+            I’m a passionate <strong>Web Developer</strong> and <strong>UI/UX Designer</strong>
+            with a strong foundation in computer science. I love creating clean,
+            user-friendly interfaces and turning ideas into real, working products.
+            Currently exploring backend logic, DSA, and generative AI to level up my skills.
+        </p>
+    </div>
+</section>
+
+
+   
+    <section id="projects">
+        <h3 class="section-title">Projects</h3>
+        <div class="card-grid">
+            <div class="card">
+                <h4>Portfolio Website</h4>
+                <p>A modern, responsive portfolio built with HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="card">
+                <h4>Task Manager App</h4>
+                <p>Organize your daily tasks efficiently with a clean UI and local storage.</p>
+            </div>
+            <div class="card">
+                <h4>Weather Dashboard</h4>
+                <p>Real-time weather updates using OpenWeatherMap API and interactive charts.</p>
+            </div>
+        </div>
+    </section>
+
+   
+
 </body>
 </html>
