@@ -316,6 +316,61 @@
         #gallery { padding: 40px 12px; }
     }
 
+ 
+    #skills {
+        padding: 80px 20px;
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(180deg, #f8fbff 0%, #f0f6ff 100%);
+    }
+
+    .skills-container {
+        max-width: 1100px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        align-items: start;
+        padding: 10px;
+    }
+
+    .skill-category {
+        background: #ffffff;
+        padding: 18px;
+        border-radius: 12px;
+        box-shadow: 0 8px 28px rgba(35,37,38,0.06);
+    }
+
+    .skill-category h4 {
+        margin-bottom: 12px;
+        color: #232526;
+        font-size: 1.05rem;
+    }
+
+    .skill-list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .skill-badge {
+        background: linear-gradient(90deg, #00ffd0 0%, #00b894 100%);
+        color: #082023;
+        padding: 8px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+
+    @media (max-width: 700px) {
+        #skills { padding: 40px 12px; }
+        .skills-container { gap: 12px; }
+    }
+
     </style>
 </head>
 <body>
@@ -366,6 +421,48 @@
             <div class="card">
                 <h4>Weather Dashboard</h4>
                 <p>Real-time weather updates using OpenWeatherMap API and interactive charts.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills">
+        <h3 class="section-title">Skills</h3>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h4>Languages</h4>
+                <ul class="skill-list">
+                    <li class="skill-badge">C++</li>
+                    <li class="skill-badge">Python</li>
+                   
+                    <li class="skill-badge">Java</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h4>Frontend</h4>
+                <ul class="skill-list">
+                    <li class="skill-badge">React.js</li>
+                    <li class="skill-badge">HTML</li>
+                    <li class="skill-badge">CSS</li>
+                    <li class="skill-badge">JavaScript</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h4>Backend &amp; Runtime</h4>
+                <ul class="skill-list">
+                    <li class="skill-badge">Node.js</li>
+                     <li class="skill-badge">Express.js</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h4>Tools &amp; VCS</h4>
+                <ul class="skill-list">
+                    <li class="skill-badge">Git</li>
+                    <li class="skill-badge">GitHub</li>
+                    <li class="skill-badge">Figma</li>
+                </ul>
             </div>
         </div>
     </section>
