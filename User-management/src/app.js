@@ -4,3 +4,5 @@ const app=express()
 app.use(express.json()); //app level middleware
 app.use("/user" , userRoutes);
 export default app;
+
+

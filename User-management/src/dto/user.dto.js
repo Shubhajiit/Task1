@@ -1,6 +1,6 @@
 import {z} from "zod";
 
-export const createUserDTO = z,object({
+export const createUserDTO = z.object({
     name:z.string().min(3,"name must be at least 3 chars"),
     email:z.string().email("invalid email"),
 });

@@ -11,8 +11,6 @@ import{createUserDTO,updateUserDTO} from "../dto/user.dto.js";
 
 const router = express.Router();
 router.get("/",getUsers);
-
-router.get("/",getUsers);
 router.post(
     "/",
     validate(createUserDTO),

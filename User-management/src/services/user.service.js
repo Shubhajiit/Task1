@@ -20,5 +20,7 @@ export const update = (id, data) => {
 };
 
 export const remove = (id) => {
+  const before = users.length;
   users = users.filter((u) => u.id !== id);
+  if (users.length === before) throw new Error("User not found");
 };
